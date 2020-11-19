@@ -7,20 +7,20 @@
             "level2":[
                 {
                     "jo":"w0001",
-                    "type":"webview", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "type":"webview", 
                     "name":"",
                     "url":"",
                     "image":""
                 },
                 {
                     "jo":"w0001",
-                    "type":"live", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "type":"live", 
                     "name":"",
                     "url":"",
                     "image":""
                 },{
                     "jo":"w0001",
-                    "type":"webview", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "type":"webview", 
                     "name":"",
                     "url":"",
                     "image":""
@@ -34,14 +34,14 @@
             "level2":[
                 {
                     "jo":"w0001",
-                    "type":"webview", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "type":"webview", 
                     "name":"",
                     "url":"",
                     "image":""
                 },
                 {
                     "jo":"w0001",
-                    "type":"live", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "type":"live", 
                     "name":"",
                     "url":"",
                     "image":""
