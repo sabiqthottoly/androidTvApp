@@ -1,0 +1,54 @@
+{
+    "level1":[
+        {
+            "jo":"w0001",
+            "name":"ABC Topic",
+            "image":"",
+            "level2":[
+                {
+                    "jo":"w0001",
+                    "type":"webview", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "name":"",
+                    "url":"",
+                    "image":""
+                },
+                {
+                    "jo":"w0001",
+                    "type":"live", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "name":"",
+                    "url":"",
+                    "image":""
+                },{
+                    "jo":"w0001",
+                    "type":"webview", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "name":"",
+                    "url":"",
+                    "image":""
+                }
+            ]
+        },
+        {
+            "jo":"w0002",
+            "name":"XYZ Topic",
+            "image":"",
+            "level2":[
+                {
+                    "jo":"w0001",
+                    "type":"webview", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "name":"",
+                    "url":"",
+                    "image":""
+                },
+                {
+                    "jo":"w0001",
+                    "type":"live", // type == webview OR live OR youtubeVideo OR mp4Video
+                    "name":"",
+                    "url":"",
+                    "image":""
+                }
+            ]
+        }
+    ]
+ }
+ 
+ 
