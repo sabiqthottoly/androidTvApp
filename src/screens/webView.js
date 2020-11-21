@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 export default function MyWebComponent (props) {
     return (
         <View style={{flex:1}}>
-            <WebView source={{ uri: props.navigation.state.params.webViewLink }} />      
+            <WebView source={{ uri: props.navigation.state.params.webview }} />      
         </View>
     ) 
 }
