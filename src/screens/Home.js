@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity,TouchableHighlight } from 'react-native'
+import { FlatList } from 'react-native-gesture-handler'
 import data from '../../data.json'
 
 function Home(props) {
@@ -8,6 +9,9 @@ function Home(props) {
     const [currentIndex,setCurrentIndex] = useState(null)
     const videoID = "hvmZqB_5tkk"
     const webViewLink = 'https://reactnative.dev/'
+    const [borderColor,setBroderColor] = useState('lightblue')
+    const [focused,setFocused] = useState(true)
+    const borderColoronFocus = 'yellow'
 
     onPressHandler = (type,url,webview) => {
         if(type === 'live'){
@@ -19,48 +23,44 @@ function Home(props) {
             props.navigation.navigate('YoutubeAndWebView',{url,webview})
         }
     }
+    const renderItem=({item,index})=>{
+        return(
+            <TouchableOpacity onFocus={()=>setCurrentIndex(index)} onPress={() => onPressHandler(item.type,item.url,item.webview)} style={{margin:20,backgroundColor:'lightblue',marginHorizontal:5,borderRadius:10,borderWidth:2,borderColor:currentIndex === index ? 'red' : 'lightblue'}}>
+                <>
+                {/* {console.log("item",item.webview)} */}
+                <Text style={{margin:30,marginHorizontal:60,fontSize:25}}>{item.name}</Text>
+                <Text style={{margin:30,marginHorizontal:60,fontSize:25}}>{item.jo}</Text>
+                </>
+            </TouchableOpacity >)
+    }
 
     return (
         <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }} >
+            {/* {console.log("level1.level2",level1)} */}
             <View style={{flexDirection:'column'}}>
-                {level1.map((item,index) => {
+                {/* {level1.map((obj,index) => {
                     return (
                         <View >
-                            {/* <TouchableOpacity onPress={currentIndex === index ? ()=>setCurrentIndex(null) :()=> setCurrentIndex(index)  } style={{ margin: 10, backgroundColor: 'lightblue', padding: 10, borderRadius: 10 }}>
-                                <Text style={{ margin:5,marginHorizontal:30,fontSize:20,fontWeight:'bold' }}>{item.name}</Text>
-                            </TouchableOpacity>
                             <View>
-                                {(currentIndex=== index) && item.level2.map((x,index) => {
-                                    return (
-                                        <TouchableOpacity onPress={() => onPressHandler(x.type)} style={{ marginHorizontal:10, justifyContent: 'center', alignItems: 'center', backgroundColor: 'lightpink', margin: 1, borderRadius: 3 }}>
-                                                <Text>{x.type}</Text>
-                                        </TouchableOpacity>
-                                    )
-                                })} */}
+                                <View style={{flexDirection:'row'}}>
+                                 {console.log(obj)}
+                                    <Text style={{fontWeight:'bold',fontSize:20}}>level 1:</Text>
+                                    <Text style={{fontWeight:'bold',fontSize:20}}>{obj.name}</Text>
+                                </View> */}
+                                <Text style={{fontWeight:'bold',fontSize:20}}>{level1[0].name}</Text>
+                                <View style={{flexDirection:'row'}}>
+                                        <FlatList 
+                                            horizontal={true}
+                                            data={level1[0].level2}
+                                            renderItem={renderItem}
+                                        />
+                                </View>
                                 
                             {/* </View> */}
-                            <View>
-                                <View style={{flexDirection:'row'}}>
-                                 {console.log(item)}
-                                    <Text style={{fontWeight:'bold',fontSize:20}}>level 1:</Text>
-                                    <Text style={{fontWeight:'bold',fontSize:20}}>{item.name}</Text>
-                                </View>
-                                <View style={{flexDirection:'row'}}>
-                                    {item.level2.map((obj,i)=>{
-                                        return(
-                                            <TouchableOpacity  onPress={() => onPressHandler(obj.type,obj.url,obj.webview)} style={{margin:20,backgroundColor:'lightblue',marginHorizontal:5,borderRadius:10}}>
-                                                {console.log("obj",obj.webview)}
-                                                <Text style={{margin:10,marginHorizontal:30,fontSize:18}}>{obj.name}</Text>
-                                                <Text style={{margin:10,marginHorizontal:30,fontSize:18}}>{obj.jo}</Text>
-                                            </TouchableOpacity >
-                                        )
-                                    })}
-                                </View>
-                            </View>
 
-                        </View>
-                    )
-                })}
+                        {/* </View> */}
+                    {/* ) */}
+                {/* })} */}
             </View>
         </View>
 
