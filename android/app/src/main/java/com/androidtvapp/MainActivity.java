@@ -1,4 +1,4 @@
-package com.androidtvapp;
+package  com.okay.newtv;
 
 import com.facebook.react.ReactActivity;
 

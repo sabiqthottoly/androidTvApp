@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import iframe from 'react-native-youtube-iframe'
+import Video from 'react-native-video';
 
  
 export default function Youtube (props) {

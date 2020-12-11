@@ -8,6 +8,8 @@ target 'androidTvApp' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
+
   target 'androidTvAppTests' do
     inherit! :complete
     # Pods for testing

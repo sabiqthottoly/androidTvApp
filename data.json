@@ -1,20 +1,69 @@
 {
-    "logo": "https://sample-videos.com/img/Sample-png-image-500kb.png",
+    "logo": "https://km01.okayg.com/tv/asset/tvLogo.jpeg",
     "splash": "https://sample-videos.com/img/Sample-png-image-500kb.png",
     "background": "https://sample-videos.com/img/Sample-png-image-500kb.png",
-    "videoUrls": [
-        {
-            "jo": "id0001",
-            "name": "a1",
-            "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-            "image": "https://sample-videos.com/gif/3.gif"
-        },
-        {
-            "jo": "id0001",
-            "name": "a1",
-            "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-            "image": "https://sample-videos.com/img/Sample-png-image-200kb.png"
-        }
+    "videoCategory": [
+        {            
+            "jo": "idcat0001",
+            "name":"category1",
+            "videoUrls": [
+            {
+                "jo": "id0001",
+                "name": "a1",
+                "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+                "image": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpgf"
+            },
+            {
+                "jo": "id0002",
+                "name": "a2",
+                "url": "http://techslides.com/demos/sample-videos/small.webm",
+                "image": "https://sample-videos.com/img/Sample-png-image-200kb.png"
+            },
+            {
+                "jo": "id0003",
+                "name": "a3",
+                "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+                "image": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+            },
+            {
+                "jo": "id0004",
+                "name": "a4",
+                "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+                "image": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg"
+            }
+        ]
+    },
+    {
+        "jo": "idcat0002",
+        "name":"category2",
+        "videoUrls": [
+            {
+                "jo": "id0011",
+                "name": "b1",
+                "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+                "image": "https://sample-videos.com/gif/3.gif"
+            },
+            {
+                "jo": "id0012",
+                "name": "b2",
+                "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+                "image": "https://sample-videos.com/img/Sample-png-image-200kb.png"
+            },
+            {
+                "jo": "id0013",
+                "name": "b3",
+                "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+                "image": "https://sample-videos.com/gif/3.gif"
+            },
+            {
+                "jo": "id0014",
+                "name": "b4",
+                "url": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+                "image": "https://sample-videos.com/img/Sample-png-image-200kb.png"
+            }
+        ]
+    }
+
     ],
     "level1": [
         {
@@ -26,22 +75,24 @@
                     "jo": "w0001",
                     "type": "webview",
                     "name": "Home",
-                    "webview": "https://reactnative.dev/",
+                    "webview": "https://www.okayg.com/",
                     "image": ""
                 },
                 {
                     "jo": "w0002",
                     "type": "live",
                     "name": "OkayG",
-                    "url": "https://www.youtube.com/embed/live_stream?channel=UChRptRlxUeD_iiELi8F8G9w",
+                    "url": "https://www.youtube.com/embed/live_stream?channel=UChRptRlxUeD_iiELi8F8G9w&autoplay=1",
+                    "channelId":"UChRptRlxUeD_iiELi8F8G9w",
                     "image": ""
                 },
                 {
                     "jo": "w0003",
-                    "type": "youtubeAndWebview",
+                    "type": "youtubeAdWebview",
                     "name": "ok ",
                     "webview": "https://www.okayg.com/",
-                    "url": "https://www.youtube.com/channel/UChRptRlxUeD_iiELi8F8G9w",
+                    "url": "https://www.youtube.com/embed/live_stream?channel=UChRptRlxUeD_iiELi8F8G9w&autoplay=1",
+                    "channelId":"UChRptRlxUeD_iiELi8F8G9w",
                     "image": ""
                 }
             ]
@@ -55,15 +106,17 @@
                     "jo": "w0002",
                     "type": "live",
                     "name": "OkayG",
-                    "url": "https://www.youtube.com/channel/UChRptRlxUeD_iiELi8F8G9w",
+                    "url": "https://www.youtube.com/embed/live_stream?channel=UChRptRlxUeD_iiELi8F8G9w&autoplay=1",
+                    "channelId":"UChRptRlxUeD_iiELi8F8G9w",
                     "image": ""
                 },
                 {
                     "jo": "w0003",
-                    "type": "youtubeAndWebview",
+                    "type": "youtubeAdWebview",
                     "name": "ok ",
                     "webview": "https://www.okayg.com/",
-                    "url": "https://www.youtube.com/channel/UChRptRlxUeD_iiELi8F8G9w",
+                    "url": "https://www.youtube.com/embed/live_stream?channel=UChRptRlxUeD_iiELi8F8G9w&autoplay=1",
+                    "channelId":"UChRptRlxUeD_iiELi8F8G9w",
                     "image": ""
                 }
             ]
