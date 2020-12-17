@@ -9,6 +9,7 @@ import level1 from './screens/level1'
 import ABCTopic from './screens/ABCTopic'
 import XYZTopic from './screens/XYZTopic'
 import YoutubeAndWebView from './screens/youtubeAndWebview'
+import Settings from './screens/settings/settings'
 import temp from '../temp'
 
 
@@ -20,6 +21,7 @@ const AppNavigator = createStackNavigator({
     ABCTopic:{screen: ABCTopic},
     XYZTopic:{screen: XYZTopic},
     level1:{screen: level1},
+    Settings:{screen:   Settings},
     temp:{screen: temp},
     WebView:{screen: WebView},
     YoutubeAndWebView:{screen: YoutubeAndWebView}
