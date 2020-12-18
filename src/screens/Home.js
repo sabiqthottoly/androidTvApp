@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { FlatList, View, Text, TouchableOpacity, TouchableHighlight, ImageBackground, StyleSheet } from 'react-native'
 import data from '../../data.json'
+
+import {connect} from 'react-redux'
+import {changeImageURL} from '../actions/action'
+
 import RNFS from 'react-native-fs';
 
 function Home(props) {
@@ -14,8 +18,12 @@ function Home(props) {
     const [size, setSize] = useState()
     const borderColoronFocus = 'yellow'
     const image = { uri: category.background };
+    const backgroudImage = props.general.imageURL
 
-
+    // useEffect(() => {
+    //     console.log("backgroudImage",backgroudImage)
+    //     console.log('image',image)
+    // },[])
     onPressHandler = (name) => {
         if (name === 'videoCategory') {
             props.navigation.navigate('VideoCategory')
@@ -72,9 +80,12 @@ function Home(props) {
         setCurrentIndex(index)
     }
 
+    gotoSettings=()=>{
+        props.navigation.navigate('Settings')
+    }
+
     const renderItem = ({ item, index }) => {
         return (
-            
             <TouchableOpacity onFocus={() => onFocusHandler(index)} onPress={() => onPressHandler(item.name)} style={{ height:currentIndex === index ? '90%' : '85%',width:currentIndex === index ? 340 : 300, elevation:currentIndex === index ? 20 : 1,
             backgroundColor: currentIndex === index ? '#B048B5' : '#EBF4FA', justifyContent: 'center',
             alignItems: 'center', marginHorizontal: 5, borderRadius: 0,transform:[{translateY:currentIndex === index ? 10 : 0}],
@@ -89,8 +100,14 @@ function Home(props) {
 
     return (
         <View style={{ flex: 1, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' }} >
-            <ImageBackground source={image} style={styles.image}>
+            <ImageBackground source={backgroudImage} style={styles.image}>
                 <View style={{ flexDirection: 'column' }}>
+                    <View>
+                        <TouchableOpacity onPress={()=>gotoSettings()} style={{backgroundColor:'#7D1B7E',elevation:10,width:70,height:70,borderRadius:70,alignItems:'center',justifyContent:'center',margin:20}}>
+                            <Text style={{color:'white',fontSize:15}}>settings</Text>
+                            {console.log(props)}
+                        </TouchableOpacity>
+                    </View>
                     <View style={{ flexDirection: 'row' }}>
                         <FlatList
                             horizontal={true}
@@ -126,4 +143,16 @@ const styles = StyleSheet.create({
         backgroundColor: "#000000a0"
     }
 });
-export default Home
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        changeImageURL:(key) => dispatch(changeImageURL(key))
+    }}
+
+const mapStateToProps = state =>({
+    general: state.general,
+})
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home) 
